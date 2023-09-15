@@ -1,8 +1,13 @@
+// creating a display variable for the div ID  "display"
 let display = document.getElementById('display');
 
+// creating a display variable for the div class "button"
 let buttons = Array.from(document.getElementsByClassName('button'));
 
+// creating a method to carry out a function on each item in the array to return a new array with the result
 buttons.map( button => {
+
+// added an event listener to the button object with the switch case, break, try, catch and break statement for the operators
     button.addEventListener('click', (e) => {
         switch(e.target.innerText){
             case 'C':
