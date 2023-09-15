@@ -1,3 +1,4 @@
+/* this is the default styling */
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     
 }
 
+/* root styling... */
 :root {
   --color-white: #ffffff;
   --box-shadow-1: -6px -6px 9px rgba(83, 83, 85, 0.1),
@@ -14,6 +16,7 @@
     inset 9px 9px 12px rgba(128, 128, 128, 0.9);
 }
 
+/* styling for the div class ".noBlueHighlight" to remove the blue-highlight when clicking the buttons*/
 .noBlueHighlight {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -23,9 +26,13 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+/* styling to remove the outline from any element with the class "noBlueHighlight'when it is in focus */
 .noBlueHighlight:focus {
     outline: none;  
 }
+
+/* styling for the div class "container" */
 .container {
   max-width: 400px;
   padding: 20px;
@@ -35,6 +42,7 @@
   box-shadow: var(--box-shadow-1);
 }
 
+/* styling for the div ID "display" */
 #display {
   text-align: right;
   overflow: auto;
@@ -48,10 +56,13 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* styling for the div ID "display" scrollbar */
 #display::-webkit-scrollbar{
   display: none;
 }
 
+/* styling for the class "buttons" */
 .buttons {
   display: grid;
   margin: 0 10px;
@@ -62,6 +73,7 @@
   box-shadow: var(--box-shadow-1);
 }
 
+/* styling for the div class "button" */
 .button {
   border-radius: 15px;
   margin: 10px;
@@ -71,6 +83,7 @@
   cursor: pointer;
 }
 
+/* styling for the div ID operator "equal" */
 #equal {
   background-color: rgb(255, 255, 255, 0.2);
   color: black;
@@ -78,27 +91,36 @@
   width: 120px;
 }
 
+/* styling for the hover feature of the buttons */
 .button:hover {
   background-color: #a0a29d;
   color: var(--color-white);
   transition: 0.5s ease-in-out;
 }
+
+/* styling for the active feature of the buttons */
 .button:active {
   box-shadow: var(--box-shadow-inset);
 }
+
+/* styling fot the div ID "operator"  */
 #operator {
   color: #069a0b;
   font-weight: 900;
 }
+
+/* styling for the hover feature of the div ID "operator" */
 #operator:hover {
   color: var(--color-white);
   background-color: #a8dea8;
 }
 
+/* styling for the div ID "symbol" */
 #symbol {
   color: red;
 }
 
+/* styling for the hover feature of the div ID "symbol" */
 #symbol:hover {
   color: var(--color-white);
   background-color: rgb(228, 170, 170);
