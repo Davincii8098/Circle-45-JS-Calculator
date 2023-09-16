@@ -1,42 +1,111 @@
 /* this is the default styling */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background-color: var(--color-white);
 }
 
 /* root styling... */
 :root {
-  --color-white: #ffffff;
+  --color-white: #ffff;
+  --color-black: #0e0c0c;
   --box-shadow-1: -6px -6px 9px rgba(83, 83, 85, 0.1),
     6px 6px 9px rgba(156, 156, 158, 0.8);
   --box-shadow-inset: inset -6px -6px 9px rgba(128, 128, 128, 0.1),
     inset 9px 9px 12px rgba(128, 128, 128, 0.9);
+  --button-color: #0e0c0c;
+}
+
+/* This is variable for dark mode styles */
+.dark-mode {
+  --color-white: #01010c;
+  --box-shadow-1: -6px -6px 22px rgba(234, 234, 239, 0.105),
+    6px 6px 9px rgba(114, 55, 126, 0.8);
+  --box-shadow-inset: inset -6px -6px 9px rgba(128, 128, 128, 0.1);
+  --color-black: #fffdd0;
+  --button-color: #fffdd0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+
+/* This is styling of the slider  */
+.modeslider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 35px;
+}
+/* This is the before clicking on the slider */
+.modeslider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+/* This is use to style the background color of the slider after clicking */
+input:checked + .modeslider {
+  background-color: #21262b;
+}
+/* This is the style that moves the slide from left to right and vice versa */
+input:checked + .modeslider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 /* styling for the div class ".noBlueHighlight" to remove the blue-highlight when clicking the buttons*/
 .noBlueHighlight {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-/* styling to remove the outline from any element with the class "noBlueHighlight'when it is in focus */
+/* This is use to remove the blue highlight when clicked*/
 .noBlueHighlight:focus {
-    outline: none;  
+  outline: none;
 }
+
+/* THE CONTAINER */
 
 /* styling for the div class "container" */
 .container {
   max-width: 400px;
   padding: 20px;
-  margin: 10vh auto 0 auto;
+  margin: auto;
   background-color: var(--color-white);
   border-radius: 20px;
   box-shadow: var(--box-shadow-1);
@@ -47,18 +116,19 @@
   text-align: right;
   overflow: auto;
   box-shadow: var(--box-shadow-1);
-  margin-top: 1px;
   margin: 15px;
+  padding: 0 12px;
   border-radius: 20px;
   height: 70px;
   line-height: 70px;
   font-size: 25px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  color: var(--color-black);
 }
 
 /* styling for the div ID "display" scrollbar */
-#display::-webkit-scrollbar{
+#display::-webkit-scrollbar {
   display: none;
 }
 
@@ -67,8 +137,10 @@
   display: grid;
   margin: 0 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: var(--button-color);
 }
 
+/* This is the box shadow for the buttons */
 .buttons > div {
   box-shadow: var(--box-shadow-1);
 }
@@ -103,7 +175,7 @@
   box-shadow: var(--box-shadow-inset);
 }
 
-/* styling for the div ID "operator"  */
+/* styling fot the div ID "operator"  */
 #operator {
   color: #069a0b;
   font-weight: 900;
@@ -118,10 +190,11 @@
 /* styling for the div ID "symbol" */
 #symbol {
   color: red;
+  font-weight: 900;
 }
 
 /* styling for the hover feature of the div ID "symbol" */
 #symbol:hover {
   color: var(--color-white);
-  background-color: rgb(228, 170, 170);
+  background-color: rgb(185, 125, 125);
 }
