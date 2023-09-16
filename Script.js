@@ -4,6 +4,23 @@ let display = document.getElementById('display');
 // creating a display variable for the div class "button"
 let buttons = Array.from(document.getElementsByClassName('button'));
 
+const toggleSwitch = document.getElementById("toggle-effect");
+const body = document.body;
+
+function toggleDarkMode() {
+    toggleSwitch.addEventListener("change", () => {
+        if (toggleSwitch.checked) {
+            body.classList.add("dark-mode");
+        } else {
+            body.classList.remove("dark-mode");
+        }
+    }
+)}
+  
+// Call the function to enable the event listener
+toggleDarkMode();
+
+
 // creating a method to carry out a function on each item in the array to return a new array with the result
 buttons.map( button => {
 
@@ -39,6 +56,6 @@ buttons.map( button => {
                           break;
             default:
                 display.innerText += e.target.innerText;
-        }
-    });
+        }
+    });
 });

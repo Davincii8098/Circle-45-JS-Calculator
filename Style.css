@@ -5,11 +5,13 @@
   box-sizing: border-box;
   list-style: none;
   background-color: var(--color-white);
+  background-color: var(--body-background);
 }
 
 /* root styling... */
 :root {
   --color-white: #ffff;
+  --body-background: #ffff;
   --color-black: #0e0c0c;
   --box-shadow-1: -6px -6px 9px rgba(83, 83, 85, 0.1),
     6px 6px 9px rgba(156, 156, 158, 0.8);
@@ -21,6 +23,7 @@
 /* This is variable for dark mode styles */
 .dark-mode {
   --color-white: #01010c;
+  --body-background: #01010c;
   --box-shadow-1: -6px -6px 22px rgba(234, 234, 239, 0.105),
     6px 6px 9px rgba(114, 55, 126, 0.8);
   --box-shadow-inset: inset -6px -6px 9px rgba(128, 128, 128, 0.1);
@@ -55,6 +58,7 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
+  background-color: var(--color-black);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 35px;
@@ -68,6 +72,7 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
+  background-color: grey;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
@@ -75,6 +80,7 @@
 /* This is use to style the background color of the slider after clicking */
 input:checked + .modeslider {
   background-color: #21262b;
+  background-color: white;
 }
 /* This is the style that moves the slide from left to right and vice versa */
 input:checked + .modeslider:before {
@@ -197,4 +203,6 @@ input:checked + .modeslider:before {
 #symbol:hover {
   color: var(--color-white);
   background-color: rgb(185, 125, 125);
+  background-color: rgb(185, 125, 125);
+
 }
