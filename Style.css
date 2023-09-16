@@ -54,6 +54,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #ccc;
   background-color: var(--color-black);
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -67,6 +68,7 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
+  background-color: white;
   background-color: grey;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -74,6 +76,7 @@
 }
 /* This is use to style the background color of the slider after clicking */
 input:checked + .modeslider {
+  background-color: #21262b;
   background-color: white;
 }
 /* This is the style that moves the slide from left to right and vice versa */
